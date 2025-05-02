@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigiChain - Prévente Officielle</title>
+  <link rel="icon" href="img/img1.png" type="image/png">
+  <style>
+    :root {
+      --primary: #4fc3f7;
+      --bg-dark: #0a0a23;
+      --bg-section: #101030;
+      --text-light: #ccc;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-dark);
+      color: white;
+      line-height: 1.6;
+    }
+
+    header, footer, .section {
+      max-width: 960px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    header img {
+      width: 120px;
+      margin-bottom: 10px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    header h1 {
+      font-size: 2.5em;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.1em;
+      color: var(--text-light);
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .section {
+      background-color: var(--bg-section);
+      border-radius: 16px;
+      margin-top: 30px;
+      padding: 30px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.4);
+    }
+
+    .section h2 {
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    .button {
+      background-color: var(--primary);
+      color: #000;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #00bcd4;
+    }
+
+    #counter {
+      font-size: 1.6em;
+      margin-top: 20px;
+      color: var(--primary);
+    }
+
+    .qr-code {
+      margin: 20px 0;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li::before {
+      content: "• ";
+      color: var(--primary);
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 60px;
+    }
+  </style>
+  <script>
+    let sold = 156245;
+    function updateCounter() {
+      document.getElementById("counter").textContent = sold.toLocaleString() + " DGC vendus";
+      sold += Math.floor(Math.random() * 100 + 20);
+    }
+    setInterval(updateCounter, 5000);
+    window.onload = updateCounter;
+  </script>
+</head>
+<body>
+
+  <header>
+    <img src="img/img1.png" alt="Logo DigiChain">
+    <p>L'intelligence artificielle au service de vos investissements crypto. Rejoignez la révolution dès maintenant !</p>
+  </header>
+
+  <section class="section">
+    <h2>🚀 Prévente Officielle</h2>
+    <p>Adresse d'envoi ETH :</p>
+    <p><strong>0x0f98ba98634df1d437C019DbE836d3C6b3E34dB0</strong></p>
+    <div class="qr-code">
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=0x0f98ba98634df1d437C019DbE836d3C6b3E34dB0" alt="QR Code ETH">
+    </div>
+    <a class="button" href="https://metamask.app.link/send/0x0f98ba98634df1d437C019DbE836d3C6b3E34dB0" target="_blank">Acheter avec MetaMask</a>
+    <div id="counter"></div>
+  </section>
+
+  <section class="section">
+    <h2>📄 Livre Blanc</h2>
+    <p>Découvrez la vision de DigiChain dans notre whitepaper officiel :</p>
+    <a class="button" href="doc/WhitepaperDigiChainlo.pdf" target="_blank">Télécharger le Whitepaper</a>
+  </section>
+
+  <section class="section">
+    <h2>📊 Tokenomics</h2>
+    <p>Total Supply : 1 000 000 DGC</p>
+    <ul>
+      <li>50% Prévente</li>
+      <li>25% Staking</li>
+      <li>15% Équipe</li>
+      <li>10% Partenariats</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>🔗 Rejoignez la communauté</h2>
+    <a class="button" href="https://twitter.com/DigiChainAI" target="_blank">Twitter</a>
+    <br><br>
+    <a class="button" href="https://t.me/DigiChainOfficial" target="_blank">Telegram</a>
+  </section>
+
+  <footer>
+    &copy; 2025 DigiChain - Tous droits réservés.<br>
+    Marc Avelar, fondateur | Email : MarcAvelar@protonmail.com
+  </footer>
+</body>
+</html>
